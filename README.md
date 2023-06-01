@@ -1,7 +1,6 @@
 # Minimum Information Copula
 
-
-Uploading sample_AdobeExpress.mp4…
+https://github.com/stardust-coder/minimum-information-copula/assets/61531920/afc16224-a6e3-463c-b05f-a1556587b8be
 
 
 ### Setup
