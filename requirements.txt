@@ -2,4 +2,6 @@ numpy
 matplotlib
 pandas
 pandas_datareader
+investpy
 streamlit
+scipy

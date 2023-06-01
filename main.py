@@ -18,6 +18,27 @@ def get_args():
 
     return args
 
+def run_from_load():
+    '''
+    data: Pandas.DataFrame
+    '''
+    mat = load_mic(size=(30, 30), const="tau", mu=0.5)
+    fig = three_dim_plot_flatten(mat, bottom=0, top=0.1)
+    np.save("result/temp", mat)
+    plt.savefig("result/temp.png")
+
+
+def plot(size,const,mu,mode):
+    if mode == "greedy":
+        inv = 10
+        mat = greedy_mic(size,"tau",inv)
+    elif mode == "load":
+        mat = load_mic(size=(30, 30), const="tau", mu=0.5)
+    else:
+        mat = load_mic(size=(30, 30), const="tau", mu=0.5) #optimize by scipy
+    fig = three_dim_plot_flatten(mat, bottom=0, top=1/size)
+    np.save("result/temp", mat)
+    plt.savefig("result/temp.png")
 
 def run():
     '''
@@ -35,4 +56,5 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    #run()
+    plot(5,"tau",1,"greedy")
