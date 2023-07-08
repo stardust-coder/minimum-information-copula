@@ -3,7 +3,7 @@
 ### Setup
 `pip install -r requirements.txt`
 
-### Run
+### Run on App
 `streamlit run app.py`
 
 

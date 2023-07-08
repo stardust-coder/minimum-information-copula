@@ -75,18 +75,6 @@ def calc_negentropy(mat):
     return res
 
 
-def preprocessing(df):
-    '''
-    df: df with 2 columns
-    return: df with 4 columns
-    '''
-    cols = df.columns
-    df_new = df.sort_values(by=cols[0])
-    df_new[f"{cols[0]}-os"] = [(i+1)/(len(df)+1) for i in range(len(df))]
-    df_new = df_new.sort_values(by=cols[1])
-    df_new[f"{cols[1]}-os"] = [(i+1)/(len(df)+1) for i in range(len(df))]
-    df_new = df_new.sort_index()
-    return df_new.iloc[:,2:4], df_new
 
 def solv_quadratic_equation(a, b, c):
     """ 2次方程式を解く  """

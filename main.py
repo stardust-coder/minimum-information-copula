@@ -57,4 +57,6 @@ def run():
 
 if __name__ == "__main__":
     #run()
-    plot(5,"tau",1,"greedy")
+    mat = greedy_mic(10,"tau",1)
+    samples = sample_from_ccopula(mat,sample_size=100)
+    print(samples)
