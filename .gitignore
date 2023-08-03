@@ -8,5 +8,6 @@ result
 data
 material
 work
-sample 
+sample/check.ipynb
 output
+cache.sqlite

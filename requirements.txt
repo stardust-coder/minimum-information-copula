@@ -5,3 +5,4 @@ pandas_datareader
 investpy
 streamlit
 scipy
+requests_cache

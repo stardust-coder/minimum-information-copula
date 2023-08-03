@@ -1,6 +1,7 @@
 import pandas as pd
 import random
 import numpy as np
+import os
 
 
 def sample_from_ccopula(arr,sample_size, save_csv=False):
@@ -29,6 +30,7 @@ def sample_from_ccopula(arr,sample_size, save_csv=False):
     df_res["Y"] = sampling_data_y
 
     if save_csv:
+        os.mkdir("output")
         df_res.to_csv(f"output/samples({n}x{n}).csv", index=False)
     return df_res
 
@@ -50,8 +52,8 @@ def MOsamples_clayton(alpha, size):
 def MOsamples_gh(gamma, size):
     def MOsample_gh(gamma): #Kanter(1975)
         #Laplace変換がgenとなるような分布から1つサンプル
-        v = np.random.uniform()
-        w = np.random.exponential()
+        v = np.random.uniform(0,1,2)
+        w = np.random.standard_exponential(size=1)
         theta_0 = ((np.sin((gamma-1)*v/gamma)/w)**(gamma-1))*np.sin(v/gamma)/(np.sin(v)**gamma)
         #一様乱数
         I = np.random.uniform(0, 1, 2)
