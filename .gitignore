@@ -5,3 +5,5 @@ result
 data
 material
 __pycache__
+mic.egg-info
+build
