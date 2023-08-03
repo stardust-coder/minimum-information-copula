@@ -1,6 +1,5 @@
-<div style="text-align: center; font-size:30px;">
-Minimum Information Copula
-</div>
+# Minimum Information Copula
+
 
 This repository contains Python codes used in our paper
 
