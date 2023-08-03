@@ -1,9 +1,10 @@
 .DS_Store
+mic.egg-info
+build
 MIC/__pycache__
+__pycache__
 MIC/result
 result
 data
 material
-__pycache__
-mic.egg-info
-build
+work
