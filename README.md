@@ -1,7 +1,20 @@
-# Minimum Information Copula
+<div style="text-align: center; font-size:30px;">
+Minimum Information Copula
+</div>
 
+This repository contains Python codes used in our paper
+
+[On the minimum information checkerboard copulas under fixed Kendall's rank correlation](https://arxiv.org/abs/2306.01604)  
+Issey Sukeda, Tomonari Sei  
+The University of Tokyo
+
+<!--
 https://github.com/stardust-coder/minimum-information-copula/assets/61531920/afc16224-a6e3-463c-b05f-a1556587b8be
+-->
 
+### Enjoy data analysis using minimum information copula models!
+
+---
 
 ### Setup
 
@@ -67,3 +80,7 @@ To be done.
 #### Stats
 
 To be done.
+
+
+## Contact
+If you have any comments, contact sukeda-issei006[_at_]g.ecc.u-tokyo.ac.jp
