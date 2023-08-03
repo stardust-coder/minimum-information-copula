@@ -31,3 +31,42 @@ def sample_from_ccopula(arr,sample_size, save_csv=False):
     if save_csv:
         df_res.to_csv(f"output/samples({n}x{n}).csv", index=False)
     return df_res
+
+
+def MOsamples_clayton(alpha, size):
+    def MOsample_clayton(alpha):
+        #Laplace変換がgenとなるような分布から1つサンプル
+        theta_0 = np.random.gamma(shape=1/alpha, scale=1.0, size=1)
+        #一様乱数
+        I = np.random.uniform(0, 1, 2)
+        #genを作用
+        tmp = -(np.log(I)/theta_0)
+        U = (tmp + 1)**(-1/alpha)
+        return U
+    return np.array([MOsample_clayton(alpha) for _ in range(size)])
+
+
+
+def MOsamples_gh(gamma, size):
+    def MOsample_gh(gamma): #Kanter(1975)
+        #Laplace変換がgenとなるような分布から1つサンプル
+        v = np.random.uniform()
+        w = np.random.exponential()
+        theta_0 = ((np.sin((gamma-1)*v/gamma)/w)**(gamma-1))*np.sin(v/gamma)/(np.sin(v)**gamma)
+        #一様乱数
+        I = np.random.uniform(0, 1, 2)
+        #genを作用
+        tmp = -(np.log(I)/theta_0)
+        U = np.exp(-(tmp)**(1/gamma))
+        return U
+    return np.array([MOsample_gh(gamma) for _ in range(size)])
+
+def Invsamples_frank(theta,size):
+    def Invsample_frank(theta): #Kanter(1975)
+        #一様乱数
+        I = np.random.uniform(0, 1, 2)
+        U1 = I[0]
+        U2 = -np.log(1+(I[1]*(1-np.exp(-theta))/(I[1]*(np.exp(-theta*U1)-1)-np.exp(-theta*U1))))/theta
+        U = np.array([U1,U2])
+        return U
+    return np.array([Invsample_frank(theta) for _ in range(size)])

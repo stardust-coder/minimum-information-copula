@@ -44,4 +44,12 @@ visualize.three_dim_flatten(mick)
 ### Run on App
 `streamlit run app.py`
 
+### Document
+
+#### Sampler
+from Clayton copula `sampler.MOsamples_clayton(alpha=10,size=100)`  
+from Gumbel-Hougaard copula `sampler.MOsamples_gh(gamma=5,size=100)`  
+ 
+
+
 
