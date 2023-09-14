@@ -9,4 +9,4 @@ data
 material
 sample/check.ipynb
 output
-cache.sqlite
+work/*/
