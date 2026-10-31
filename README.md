@@ -1,15 +1,21 @@
 # Minimum Information Copula
 
+Note: Please see our latest repository [mininfo-checkerboard-copula](https://github.com/stardust-coder/mininfo-checkerboard-copula).
 
-This repository contains Python codes used in our paper
+How to Cite: 
+```
+@article{sukeda2025minimum,
+  title={On the minimum information checkerboard copula under fixed {K}endall’s $\tau$},
+  author={Sukeda, Issey and Sei, Tomonari},
+  journal={Statistical Papers},
+  volume={66},
+  number={1},
+  pages={29},
+  year={2025},
+  publisher={Springer}
+}
+```
 
-[On the minimum information checkerboard copulas under fixed Kendall's rank correlation](https://arxiv.org/abs/2306.01604)  
-Issey Sukeda, Tomonari Sei  
-The University of Tokyo
-
-<!--
-https://github.com/stardust-coder/minimum-information-copula/assets/61531920/afc16224-a6e3-463c-b05f-a1556587b8be
--->
 
 ### Enjoy data analysis using minimum information copula models!
 
@@ -72,14 +78,3 @@ from Clayton copula `sampler.MOsamples_clayton(alpha=10,size=100)`
 from Gumbel-Hougaard copula `sampler.MOsamples_gh(gamma=5,size=100)`   
 from Frank copula `sampler.Invsamples_frank(theta=20,size=100)`    
 
-#### Copula
-
-To be done.
-
-#### Stats
-
-To be done.
-
-
-## Contact
-If you have any comments, contact sukeda-issei006[_at_]g.ecc.u-tokyo.ac.jp
